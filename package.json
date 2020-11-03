@@ -20,7 +20,8 @@
     "dependencies": {
         "@coveops/localization-manager": "^1.0.0",
         "@coveops/turbo-core": "^1.1.1",
-        "coveo-search-ui": "^2.10081.2"
+        "coveo-search-ui": "^2.10081.2",
+        "tippy.js": "^6.2.7"
     },
     "devDependencies": {
         "@coveops/cli": "^0.13.2"

@@ -1,0 +1,40 @@
+.coveo-editable .CoveoResultActionsMenu {
+    display: block;
+    margin-top: 0;
+    position: relative;
+    min-height: 20px;
+}
+
+.CoveoResultActionsMenu {
+    .CoveoLinkToCase, .CoveoForDynamicsTakeNote, .CoveoForDynamicsQuickCreate, .CoveoEmail {
+        .coveo-caption-for-icon {
+            white-space: normal;
+            text-align: center;
+            width: 80px;
+        }
+    }
+
+    .coveo-result-actions-menu-menu-item {
+        height: 24px;
+
+        .coveo-icon-for-quickview-svg {
+            margin-top: 6px;
+        }
+
+        .coveo-icon-for-take-note-svg {
+            margin-top: 2px;
+        }
+
+        .coveo-icon-for-quickcreate-svg {
+            margin-top: 2px;
+        }
+
+        .coveo-icon-for-link-svg,.coveo-icon-for-unlink-svg  {
+            margin-top: 4px;
+        }
+
+        .coveo-icon-for-email-svg {
+            margin-top: 6px;
+        }
+    }
+}
