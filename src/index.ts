@@ -1,1 +1,1 @@
-export * from './InsightPanelSearchTips';
+export * from './ui/InsightPanelSearchTips/InsightPanelSearchTips';
