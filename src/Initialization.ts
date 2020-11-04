@@ -16,5 +16,3 @@ export const Form: IFormContext = buildFormContext(parent['Xrm'], null);
 const ContextHandler = new FormContextHandlerImpl(ContextObjects);
 ContextHandler.setFormContext(Form);
 export const FormContextHandler = ContextHandler;
-
-debugger;

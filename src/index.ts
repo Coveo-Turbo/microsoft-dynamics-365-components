@@ -2,7 +2,6 @@
 export { IContext } from "./utils/IContext";
 export { Insight } from "./utils/Insight";
 
-
 export * from './Initialization';
 
 export * from './ui/InsightPanelSearchTips/InsightPanelSearchTips';

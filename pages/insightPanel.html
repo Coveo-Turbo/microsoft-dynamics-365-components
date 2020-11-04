@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insight Panel</title>
-    <script src="https://static.cloud.coveo.com/searchui/v2.9659/js/CoveoJsSearch.Lazy.js"></script>
+    <script src="https://static.cloud.coveo.com/searchui/v2.9659/js/CoveoJsSearch.js"></script>
     <script src="https://static.cloud.coveo.com/searchui/v2.9659/js/cultures/en.js"></script>
     <script src="https://static.cloud.coveo.com/searchui/v2.9659/js/templates/templatesNew.js"></script>
 
@@ -24,14 +24,6 @@
                 Analytics: {
                     searchHub: demoConfig.searchHub,
                 }
-            });
-    
-            const standaloneSearchBoxRoot = document.querySelector('.CoveoSearchInterface');
-        
-            Coveo.initSearchbox(standaloneSearchBoxRoot, demoConfig.searchUrl, {
-                Analytics: {
-                    searchHub: demoConfig.searchHub,
-                },
             });
         })
     </script>
