@@ -4,7 +4,7 @@ import {
     IFormContext,
 } from "coveo-xrm";
 import { instanciateCrm } from "./core/InitCrm";
-// import { FormContextHandlerImpl } from "./ui/Context/FormContextHandlerImpl";
+import { FormContextHandlerImpl } from "./ui/Context/FormContextHandlerImpl";
 import { ContextObjects as ContextObjectTemp } from "./utils/Liquid/ContextObjects";
 import { LiquidFilters } from "./utils/Liquid/LiquidFilters";
 
@@ -13,8 +13,8 @@ export const Filters = new LiquidFilters();
 export const Crm: CrmClient = instanciateCrm();
 export const Form: IFormContext = buildFormContext(parent['Xrm'], null);
 
-// const ContextHandler = new FormContextHandlerImpl(ContextObjects);
-// ContextHandler.setFormContext(Form);
-// export const FormContextHandler = ContextHandler;
+const ContextHandler = new FormContextHandlerImpl(ContextObjects);
+ContextHandler.setFormContext(Form);
+export const FormContextHandler = ContextHandler;
 
 debugger;

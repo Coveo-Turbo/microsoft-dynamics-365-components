@@ -25,6 +25,8 @@
         "tippy.js": "^6.2.7"
     },
     "devDependencies": {
-        "@coveops/cli": "^0.13.2"
+        "@coveops/cli": "^0.13.2",
+        "@types/webpack-env": "^1.15.3",
+        "@types/xrm": "^9.0.31"
     }
 }
