@@ -1,0 +1,23 @@
+.CoveoResultAction {
+    .coveo-caption {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .coveo-icon {
+        margin: 0 5px 0 0;
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+
+        .coveo-box-quick-view-icon {
+            height: 12px;
+            width: 20px;
+        }
+    }
+
+    .coveo-box-quick-view-in-menu {
+        text-align: left;
+        display: inline-flex;
+        float: left;
+    }
+}
