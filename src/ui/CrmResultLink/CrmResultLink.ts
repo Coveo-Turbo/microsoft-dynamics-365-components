@@ -1,7 +1,6 @@
 import {
   $$,
   ComponentOptions,
-  Initialization,
   IQueryResult,
   IResultLinkOptions,
   IResultsComponentBindings,

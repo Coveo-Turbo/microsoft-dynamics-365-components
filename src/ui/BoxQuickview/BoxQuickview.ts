@@ -1,7 +1,6 @@
 import {
     $$,
     Component,
-    Initialization,
     IQueryResult,
     IQuickviewOptions,
     IResultsComponentBindings,
@@ -11,13 +10,13 @@ import {
 } from "coveo-search-ui";
 import { SVGDom } from "../../utils/SVGDom";
 import { SVGIcons } from "../../utils/SVGUtils";
-import { IncludedInResultAction } from "./ResultAction";
-import { lazyComponent } from '@coveops/turbo-core';
+import { IncludedInResultAction } from "../ResultAction/ResultAction";
+import { lazyDependentComponent } from '@coveops/turbo-core';
 
-@lazyComponent
 /**
  * The _BoxQuickview_ component inherits the _Quickview_ component, and thus offers the same options(see [Coveo Component Quickview](https://coveo.github.io/search-ui/components/quickview.html)).
  */
+@lazyDependentComponent('Quickview')
 export class BoxQuickview extends Quickview implements IncludedInResultAction {
     static ID = "BoxQuickview";
 
