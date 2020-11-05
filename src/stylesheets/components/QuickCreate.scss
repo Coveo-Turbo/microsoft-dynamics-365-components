@@ -1,0 +1,46 @@
+.mod-crm-form {
+  .CoveoTab:not(.coveo-tab-dropdown) .CoveoQuickCreate {
+    .coveo-icon-for-quickcreate {
+      line-height: 0;
+      vertical-align: text-top;
+    }
+
+    .coveo-icon-for-quickcreate-svg {
+      vertical-align: baseline;
+    }
+  }
+}
+
+.CoveoTab {
+  .CoveoQuickCreate {
+    float: right;
+    margin-left: $quickcreate-in-tabs-margin-left;
+
+    .coveo-icon-for-quickcreate {
+      line-height: 0;
+    }
+  }
+}
+
+.CoveoQuickCreate {
+  cursor: pointer;
+  color: $light-blue;
+  position: relative;
+
+  .coveo-caption {
+    display: none;
+  }
+}
+
+.coveo-icon-for-quickcreate-svg {
+  height: 18px;
+  width: 18px;
+}
+
+.CoveoResult .CoveoResultAction {
+  .CoveoQuickCreate {
+    .coveo-caption {
+      display: block;
+    }
+  }
+}
