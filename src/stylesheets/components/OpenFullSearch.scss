@@ -1,0 +1,25 @@
+.CoveoOpenFullSearch {
+    color: $medium-blue;
+    cursor: pointer;
+    display: flex;
+
+    &:hover .arrow  {
+        fill: $color-active-yellow;
+    }
+
+    .coveo-open-full-search {
+        margin-left: 5px;
+    }
+}
+
+.coveo-open-full-search {
+    fill: $medium-blue;
+
+    .coveo-open-full-search-svg {
+        width: 18px;
+    }
+
+    &:hover .arrow  {
+        fill: $color-active-yellow;
+    }
+}
