@@ -90,8 +90,6 @@ export class ResultActionsSendEmail extends ResultActionBase {
       options
     );
 
-    debugger;
-
     if (this.display()) {
       this.render();
       $$(this.element).on("click", () => this.handleClick());

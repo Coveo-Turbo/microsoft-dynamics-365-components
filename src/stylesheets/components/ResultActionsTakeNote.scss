@@ -1,0 +1,26 @@
+.CoveoForDynamicsTakeNote {
+    color: $light-blue;
+    cursor: pointer;
+    position: relative;
+
+    .coveo-caption {
+        display: none;
+    }
+}
+
+.coveo-box-take-note-in-menu {
+    text-align: left;
+}
+
+.CoveoResult .CoveoResultAction {
+    .CoveoForDynamicsTakeNote {
+        .coveo-caption {
+            display: block;
+        }
+    }
+}
+
+.coveo-icon-for-take-note-svg {
+    height: 18px;
+    width: 18px;
+}

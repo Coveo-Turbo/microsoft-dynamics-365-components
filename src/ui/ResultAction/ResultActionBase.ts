@@ -49,7 +49,6 @@ export abstract class ResultActionBase
   }
 
   private addTooltip() {
-    // tslint:disable-next-line:no-unused-expression
     tippy(this.element, {
       content: this.options.title.toLocaleString(),
     });

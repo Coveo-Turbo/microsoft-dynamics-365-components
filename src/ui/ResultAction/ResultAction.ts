@@ -3,7 +3,6 @@ import {
   Component,
   ComponentOptions,
   Dom,
-  Initialization,
   IQueryResult,
   IResultsComponentBindings,
   ResultListEvents,
