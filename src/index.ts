@@ -15,5 +15,6 @@ export { IncludedInResultAction } from "./ui/ResultAction/ResultAction";
 export { ResultAction } from "./ui/ResultAction/ResultAction";
 export { ResultActionsSendEmail } from "./ui/ResultActionsSendEmail/ResultActionsSendEmail";
 export { ResultActionsTakeNote } from "./ui/ResultActionsTakeNote/ResultActionsTakeNote";
+export { ResultActionsAttachToCase } from "./ui/ResultActionsAttachToCase/ResultActionsAttachToCase";
 export { QuickCreate } from "./ui/QuickCreate/QuickCreate";
 export { RemoveContext } from "./ui/RemoveContext/RemoveContext";

@@ -1,0 +1,33 @@
+.link-button, .unlink-button {
+    display: none;
+    color: $light-blue;
+    position: relative;
+
+    &.active {
+        display: block;
+    }
+
+    .coveo-icon-for-link-svg, .coveo-icon-for-unlink-svg {
+        height: 15px;
+        width: 16px;
+
+        .coveo-icon-x {
+            color: $unified-interface-red;
+        }
+    }
+}
+
+.coveo-link-to-case-in-menu {
+    text-align: left;
+}
+
+.CoveoResultActionsAttachToCase {
+    cursor: pointer;
+    position: relative;
+
+    .link-button, .unlink-button {
+        .coveo-caption {
+            display: none;
+        }
+    }
+}

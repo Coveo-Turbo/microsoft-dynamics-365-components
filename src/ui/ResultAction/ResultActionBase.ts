@@ -5,8 +5,8 @@ import {
   IResultsComponentBindings,
 } from "coveo-search-ui";
 import tippy from "tippy.js";
-import { IncludedInResultAction } from "./ResultAction";
 import "tippy.js/dist/tippy.css";
+import { IncludedInResultAction } from "./ResultAction";
 import { lazyComponent } from "@coveops/turbo-core";
 
 @lazyComponent
