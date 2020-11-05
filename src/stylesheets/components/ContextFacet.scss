@@ -1,0 +1,101 @@
+.CoveoContextFacet {
+    font-family: Lato;
+    background-color: white;
+    border: $default-border;
+    border-radius: $default-border-radius;
+    display: none;
+
+    &.coveo-active {
+        display: block;
+    }
+
+    .coveo-context-header {
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        border-radius: $default-border-radius $default-border-radius 0 0;
+        background-color: $unified-interface-blue;
+        color: $color-blueish-white;
+
+        .coveo-context-header-from {
+            font-size: 10px;
+        }
+
+        .coveo-context-header-entity {
+            font-size: 15px;
+
+            .identifier {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .coveo-context-content {
+        font-size: 11px;
+        display: flex;
+        margin: 15px 0;
+
+        .coveo-context-col {
+            flex-grow: 1;
+            flex-basis: 0;
+            min-width: 0;
+
+            &+ .coveo-context-col {
+                .coveo-context-attribute {
+                    border-left: $default-border;
+                }
+            }
+        }
+
+        span {
+            display: block;
+        }
+
+        .coveo-context-attribute {
+            padding: 0 15px;
+
+            &+ .coveo-context-attribute {
+                margin-top: 15px;
+            }
+        }
+
+        .coveo-context-title {
+            color: $color-blueish-gray;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 17px;
+
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .coveo-context-value {
+            color: $color-dark-grey;
+            line-height: 15px;
+
+            max-width: 100%;
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+
+#editor {
+    .CoveoContextFacet {
+        display: block;
+    }
+}
+
+.coveo-context-facet {
+    border: $default-border;
+    border-radius: $default-border-radius;
+    background: $unified-interface-blue;
+    color: white;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 8px;
+}

@@ -18,3 +18,4 @@ export { ResultActionsTakeNote } from "./ui/ResultActionsTakeNote/ResultActionsT
 export { ResultActionsAttachToCase } from "./ui/ResultActionsAttachToCase/ResultActionsAttachToCase";
 export { QuickCreate } from "./ui/QuickCreate/QuickCreate";
 export { RemoveContext } from "./ui/RemoveContext/RemoveContext";
+export { ContextFacet } from "./ui/ContextFacet/ContextFacet";
