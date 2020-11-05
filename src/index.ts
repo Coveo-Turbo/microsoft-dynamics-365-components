@@ -2,12 +2,15 @@
 export { IContext } from "./utils/IContext";
 export { Insight } from "./utils/Insight";
 
-export * from './Initialization';
+export * from "./Initialization";
 
 // UI Components
-export * from './ui/InsightPanelSearchTips/InsightPanelSearchTips';
-export * from './ui/CrmResultLink/CrmResultLink';
-export * from './ui/BoxQuickview/BoxQuickview';
-export * from './ui/FormChangeDetector/FormChangeDetector';
-export * from './ui/InsightContext/InsightContext';
-export * from './ui/OpenFullSearch/OpenFullSearch';
+export { InsightPanelSearchTips } from "./ui/InsightPanelSearchTips/InsightPanelSearchTips";
+export { CrmResultLink } from "./ui/CrmResultLink/CrmResultLink";
+export { BoxQuickview } from "./ui/BoxQuickview/BoxQuickview";
+export { FormChangeDetector } from "./ui/FormChangeDetector/FormChangeDetector";
+export { InsightContext } from "./ui/InsightContext/InsightContext";
+export { OpenFullSearch } from "./ui/OpenFullSearch/OpenFullSearch";
+export { IncludedInResultAction } from "./ui/ResultAction/ResultAction";
+export { ResultAction } from "./ui/ResultAction/ResultAction";
+export { ResultActionsSendEmail } from "./ui/ResultActionsSendEmail/ResultActionsSendEmail";

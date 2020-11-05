@@ -6,15 +6,15 @@ import {
 } from "coveo-search-ui";
 import tippy from "tippy.js";
 import { IncludedInResultAction } from "./ResultAction";
-
 import "tippy.js/dist/tippy.css";
-
 import { lazyComponent } from "@coveops/turbo-core";
 
 @lazyComponent
 export abstract class ResultActionBase
   extends Component
   implements IncludedInResultAction {
+  static ID = "ResultActionBase";
+
   constructor(
     public element: HTMLElement,
     type: string,
