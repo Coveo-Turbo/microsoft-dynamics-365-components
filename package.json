@@ -21,6 +21,7 @@
         "@coveops/localization-manager": "^1.0.0",
         "@coveops/turbo-core": "^1.1.1",
         "coveo-search-ui": "^2.10081.2",
+        "coveo-styleguide": "^8.8.0",
         "coveo-xrm": "^0.4.4",
         "svg-inline-loader": "^0.8.2",
         "tippy.js": "^6.2.7"
