@@ -19,3 +19,4 @@ export { ResultActionsAttachToCase } from "./ui/ResultActionsAttachToCase/Result
 export { QuickCreate } from "./ui/QuickCreate/QuickCreate";
 export { RemoveContext } from "./ui/RemoveContext/RemoveContext";
 export { ContextFacet } from "./ui/ContextFacet/ContextFacet";
+export { ContextualComponent } from "./ui/ContextualComponent/ContextualComponent";
