@@ -21,3 +21,4 @@ export { RemoveContext } from "./ui/RemoveContext/RemoveContext";
 export { ContextFacet } from "./ui/ContextFacet/ContextFacet";
 export { ContextualComponent } from "./ui/ContextualComponent/ContextualComponent";
 export { ExtensionSome } from "./ui/ExtensionSome/ExtensionSome";
+export { FormFieldValueQuerySyntax } from "./ui/FormFieldValueQuerySyntax/FormFieldValueQuerySyntax";
