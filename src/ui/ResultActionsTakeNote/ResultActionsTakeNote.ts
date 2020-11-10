@@ -8,9 +8,9 @@ import {
   IResultsComponentBindings,
   Template,
 } from "coveo-search-ui";
-import { CrmClient } from "coveo-xrm";
-import { inject, Injectable } from "../../core/Injector";
-import { Form, FormContextHandler } from "../../Initialization";
+// import { CrmClient } from "coveo-xrm";
+// import { inject, Injectable } from "../../core/Injector";
+import { Form, FormContextHandler, Crm } from "../../Initialization";
 import { SVGDom } from "../../utils/SVGDom";
 import { SVGIcons } from "../../utils/SVGUtils";
 import { ResultActionBase } from "../ResultAction/ResultActionBase";
@@ -31,8 +31,8 @@ export interface IResultActionsTakeNoteOptions {
 @lazyDependentComponent("ResultActionBase")
 export class ResultActionsTakeNote extends ResultActionBase {
   static ID = "ResultActionsTakeNote";
-  @inject(Injectable.CrmClient)
-  private crmClient: CrmClient;
+  // @inject(Injectable.CrmClient)
+  // private crmClient: CrmClient;
 
   /*
    * The options for the ResultActionsTakeNote component.
@@ -179,7 +179,7 @@ export class ResultActionsTakeNote extends ResultActionBase {
   }
 
   handleClick() {
-    return FormContextHandler.getCurrentEntitySetName(this.crmClient.WebApi)
+    return FormContextHandler.getCurrentEntitySetName(Crm.WebApi)
       .then((setName) => {
         return this.prepareResultActionsTakeNoteComponent().then(() => {
           const note = this.options.removeHtmlTags
