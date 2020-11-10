@@ -1,7 +1,7 @@
 import { CrmClient, GlobalContext, IGlobalContext, Navigation, NavigationV8, NullGlobalContext, NullNavigation, WebApiService } from "coveo-xrm";
 
 export const instanciateCrm = () => {
-    const xrm = window['Xrm'];
+    const xrm = window['Xrm'] || parent['Xrm'];
     const xrmContext = xrm && xrm.Utility.getGlobalContext
         ? xrm.Utility.getGlobalContext()
         : xrm
