@@ -7,6 +7,7 @@ import { LiquidFilters } from "./utils/Liquid/LiquidFilters";
 export const ContextObjects = new ContextObjectTemp();
 export const Filters = new LiquidFilters();
 export const Crm: CrmClient = instanciateCrm();
+export const CrmInstanciate = instanciateCrm;
 export const Form: IFormContext = buildFormContext(parent["Xrm"], null);
 
 const ContextHandler = new FormContextHandlerImpl(ContextObjects);
