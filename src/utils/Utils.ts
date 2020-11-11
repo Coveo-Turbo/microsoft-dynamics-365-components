@@ -29,4 +29,12 @@ export class Utils {
     static escapeForRegex(str: string): string {
         return str.replace(/[\[\](){}?*+\^$\\.|\-]/g, "\\$&");
     }
+
+    static ensureEndsWithSlash = (url: string): string => {
+        const lastChar = url.substr(-1);
+        if (lastChar !== "/" && lastChar !== "\\") {
+            url = url + "/";
+        }
+        return url;
+    };
 }
