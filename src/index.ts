@@ -3,6 +3,7 @@ export { IContext } from "./utils/IContext";
 export { Insight } from "./utils/Insight";
 
 export * from "./Initialization";
+export * from "./DynamicsTokenHandler";
 
 // UI Components
 export { InsightPanelSearchTips } from "./ui/InsightPanelSearchTips/InsightPanelSearchTips";
