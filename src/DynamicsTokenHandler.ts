@@ -16,19 +16,18 @@ const GET_SEARCH_TOKEN = 'coveo_GetSearchConfig';
 
 export class DynamicsTokenHandler {
 
-    constructor() {
-        debugger
-    }
+    // constructor() {
+    //     this.getConfig().then( (arg: any) => {console.log(arg)});
+    // }
 
-    public init(getTokenSuccessCallback: (data: ISearchConfig) => void){
-        this.getConfig().then((data: ISearchConfig) => this.returnParam(data, getTokenSuccessCallback));
-    }
+    // public init(getTokenSuccessCallback: (data: ISearchConfig) => void){
+    //     this.getConfig().then((data: ISearchConfig) => this.returnParam(data, getTokenSuccessCallback));
+    // }
 
-    public returnParam(data: ISearchConfig, getTokenSuccessCallback: (data: ISearchConfig) => void){
-        getTokenSuccessCallback(data);
-        console.log('success');
-        debugger
-    }
+    // public returnParam(data: ISearchConfig, getTokenSuccessCallback: (data: ISearchConfig) => void){
+    //     getTokenSuccessCallback(data);
+    //     console.log('success');
+    // }
 
     public getConfig(): Promise<ISearchConfig> {
         const config = this.tryGetConfigFromCookies();
