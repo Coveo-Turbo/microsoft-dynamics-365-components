@@ -28,5 +28,8 @@ pack:
 publish:
 	npm publish --access public
 
+publishbeta:
+	npm publish --tag beta --access public
+
 	
 .PHONY: default init setup build serve pack publish

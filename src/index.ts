@@ -4,6 +4,7 @@ export { Insight } from "./utils/Insight";
 
 export * from "./Initialization";
 export * from "./DynamicsTokenHandler";
+export * from "./DynamicsUserInfoHandler";
 
 // UI Components
 export { InsightPanelSearchTips } from "./ui/InsightPanelSearchTips/InsightPanelSearchTips";
