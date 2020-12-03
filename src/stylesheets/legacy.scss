@@ -1,0 +1,1140 @@
+input[type="checkbox"].coveo-slide-toggle {
+  display: none;
+}
+input[type="checkbox"].coveo-slide-toggle + button {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+}
+input[type="checkbox"].coveo-slide-toggle + button:before,
+input[type="checkbox"].coveo-slide-toggle + button:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 32px;
+  content: " ";
+  background-color: #bcc3ca;
+  transition: all 0.2s linear;
+}
+input[type="checkbox"].coveo-slide-toggle + button:after {
+  top: 2px;
+  bottom: 2px;
+  width: 18px;
+  margin-left: 2px;
+  background-color: #f1f3f4;
+}
+input[type="checkbox"].coveo-slide-toggle:checked + button:before {
+  background-color: #009830;
+}
+input[type="checkbox"].coveo-slide-toggle:checked + button:after {
+  margin-left: 12px;
+}
+input[type="checkbox"].coveo-slide-toggle:disabled + button {
+  outline: none;
+  cursor: default;
+  opacity: 0.4;
+}
+
+.coveo-slide-toggle-label {
+  align-items: center;
+  display: inline-flex;
+  line-height: 20px;
+  transition: opacity 0.35s ease;
+  user-select: none;
+}
+.coveo-slide-toggle-label.disabled,
+.coveo-slide-toggle-label[for].disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+.coveo-slide-toggle-label.boxed {
+  display: inline-block;
+  padding: 8px 10px;
+  border: solid 1px #bcc3ca;
+}
+.coveo-slide-toggle-label.boxed .toggle-description {
+  display: block;
+  margin-top: 8px;
+  color: #373737;
+  font-size: 13px;
+  line-height: 16px;
+}
+.coveo-slide-toggle-label.boxed button {
+  float: right;
+}
+.coveo-slide-toggle-label .toggle-label {
+  font-size: 16px;
+}
+.coveo-slide-toggle-label button + .toggle-label,
+.coveo-slide-toggle-label .toggle-label + .coveo-slide-toggle + button {
+  margin-left: 18px;
+}
+
+label[for].coveo-slide-toggle-label {
+  cursor: pointer;
+}
+
+.coveo-hidden {
+  display: none;
+}
+
+.btn {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 22px;
+  padding: 2px 7px;
+  color: #1d4f76;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif,
+    sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #ffffff;
+  border: 1px solid #bcc3ca;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn .icon:not([class*="fill-"]) {
+  fill: #1d4f76;
+}
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+}
+.btn:focus {
+  background-color: #e6ecf0;
+  outline: thin dotted;
+  outline: 2px auto #296896;
+  outline: 3px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:disabled,
+.btn.state-disabled {
+  color: #bcc3ca;
+  cursor: default;
+}
+.btn:disabled .icon,
+.btn.state-disabled .icon {
+  fill: #bcc3ca;
+}
+.btn.mod-small {
+  height: 24px;
+  padding: 0 10px;
+  font-size: 11px;
+  line-height: 14px;
+}
+.btn.mod-large {
+  height: 50px;
+}
+.btn.mod-primary {
+  color: #ffffff;
+  background-color: #f58020;
+  border: 1px solid #f58020;
+}
+.btn.mod-primary:hover,
+.btn.mod-primary:focus {
+  background-color: #f68e38;
+  border: 1px solid #f68e38;
+}
+.btn.mod-primary:disabled,
+.btn.mod-primary.state-disabled {
+  background-color: #f9b882;
+  border: 1px solid #f9b882;
+}
+.btn.mod-primary .icon {
+  fill: #ffffff;
+}
+.btn.mod-danger {
+  color: #ffffff;
+  background-color: #ce3f00;
+  border: 1px solid #ce3f00;
+}
+.btn.mod-danger:hover,
+.btn.mod-danger:focus {
+  background-color: #e84700;
+  border: 1px solid #e84700;
+}
+.btn.mod-danger:disabled,
+.btn.mod-danger.state-disabled {
+  background-color: #ff7335;
+  border: 1px solid #ff7335;
+}
+.btn.mod-danger .icon {
+  fill: #ffffff;
+}
+.btn.mod-link {
+  background-color: transparent;
+  border: none;
+}
+.btn + .btn,
+.btn + .btn-container {
+  margin-left: 10px;
+}
+.btn .confirm-icon-error,
+.btn .confirm-icon-success {
+  display: none;
+}
+.btn.mod-confirm-success,
+.btn.mod-confirm-error {
+  position: relative;
+  color: transparent;
+  outline: 0;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+.btn.mod-confirm-success:before,
+.btn.mod-confirm-error:before {
+  position: absolute;
+  top: 28px;
+  font-size: 11px;
+  text-transform: initial;
+  animation: vp-fadeIn ease-in 1;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.btn.mod-confirm-success.mod-confirm-right:before,
+.btn.mod-confirm-error.mod-confirm-right:before {
+  right: 0;
+}
+.btn.mod-confirm-success.mod-confirm-left:before,
+.btn.mod-confirm-error.mod-confirm-left:before {
+  left: 0;
+}
+.btn.mod-confirm-success .confirm-icon-error,
+.btn.mod-confirm-success .confirm-icon-success,
+.btn.mod-confirm-error .confirm-icon-error,
+.btn.mod-confirm-error .confirm-icon-success {
+  position: absolute;
+  top: calc(50% - 15px / 2);
+  right: calc(50% - 15px / 2);
+  display: inline-block;
+  font-size: 15px;
+  fill: #ffffff;
+}
+.btn.mod-confirm {
+  margin-bottom: 20px;
+}
+.btn.mod-confirm-success {
+  background-color: #009830;
+  border: 1px solid #009830;
+}
+.btn.mod-confirm-success:focus,
+.btn.mod-confirm-success:hover {
+  background-color: #009830;
+}
+.btn.mod-confirm-success:before {
+  color: #009830;
+  content: attr(data-confirm-success);
+}
+.btn.mod-confirm-success .confirm-icon-error {
+  display: none;
+}
+.btn.mod-confirm-error {
+  background-color: #ce3f00;
+  border: 1px solid #ce3f00;
+}
+.btn.mod-confirm-error:focus,
+.btn.mod-confirm-error:hover {
+  background-color: #ce3f00;
+}
+.btn.mod-confirm-error:before {
+  color: #ce3f00;
+  content: attr(data-confirm-error);
+}
+.btn.mod-confirm-error .confirm-icon-success {
+  display: none;
+}
+
+.btn-container {
+  display: inline-block;
+  margin: 0;
+}
+.btn-container .btn[disabled] {
+  pointer-events: none;
+}
+.btn-container + .btn,
+.btn-container + .btn-container {
+  margin-left: 10px;
+}
+
+.btn {
+  color: #505050;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 10000;
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+  text-transform: none;
+  visibility: visible;
+}
+.tooltip[x-placement^="top"] {
+  padding: 5px 0;
+  margin-top: -3px;
+}
+.tooltip[x-placement^="top"] .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #263e55;
+  border-width: 5px 5px 0;
+}
+.tooltip[x-placement^="right"] {
+  padding: 0 5px;
+  margin-left: 3px;
+}
+.tooltip[x-placement^="right"] .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-right-color: #263e55;
+  border-width: 5px 5px 5px 0;
+}
+.tooltip[x-placement^="bottom"] {
+  padding: 5px 0;
+  margin-top: 3px;
+}
+.tooltip[x-placement^="bottom"] .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-color: #263e55;
+  border-width: 0 5px 5px;
+}
+.tooltip[x-placement^="left"] {
+  padding: 0 5px;
+  margin-left: -3px;
+}
+.tooltip[x-placement^="left"] .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-left-color: #263e55;
+  border-width: 5px 0 5px 5px;
+}
+.tooltip .tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip .tooltip-inner {
+  max-width: 300px;
+  padding: 5px 10px;
+  color: #ffffff;
+  text-decoration: none;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+  background-color: #263e55;
+  border-radius: 2px;
+}
+
+.tooltip-footer {
+  margin-top: 10px;
+}
+
+.CoveoResultAction .coveo-caption {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.CoveoResultAction .coveo-icon {
+  margin: 0 5px 0 0;
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+.CoveoResultAction .coveo-icon .coveo-box-quick-view-icon {
+  height: 12px;
+  width: 20px;
+}
+
+.CoveoResultAction .coveo-box-quick-view-in-menu {
+  text-align: left;
+  display: inline-flex;
+  float: left;
+}
+
+.CoveoContextFacet {
+  font-family: Lato;
+  background-color: white;
+  border: 1px solid #bcc3ca;
+  border-radius: 2px;
+  display: none;
+}
+.CoveoContextFacet.coveo-active {
+  display: block;
+}
+.CoveoContextFacet .coveo-context-header {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px 2px 0 0;
+  background-color: #3b79b7;
+  color: #f7f8f9;
+}
+.CoveoContextFacet .coveo-context-header .coveo-context-header-from {
+  font-size: 10px;
+}
+.CoveoContextFacet .coveo-context-header .coveo-context-header-entity {
+  font-size: 15px;
+}
+.CoveoContextFacet
+  .coveo-context-header
+  .coveo-context-header-entity
+  .identifier {
+  font-weight: bold;
+}
+.CoveoContextFacet .coveo-context-content {
+  font-size: 11px;
+  display: flex;
+  margin: 15px 0;
+}
+.CoveoContextFacet .coveo-context-content .coveo-context-col {
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 0;
+}
+.CoveoContextFacet
+  .coveo-context-content
+  .coveo-context-col
+  + .coveo-context-col
+  .coveo-context-attribute {
+  border-left: 1px solid #bcc3ca;
+}
+.CoveoContextFacet .coveo-context-content span {
+  display: block;
+}
+.CoveoContextFacet .coveo-context-content .coveo-context-attribute {
+  padding: 0 15px;
+}
+.CoveoContextFacet
+  .coveo-context-content
+  .coveo-context-attribute
+  + .coveo-context-attribute {
+  margin-top: 15px;
+}
+.CoveoContextFacet .coveo-context-content .coveo-context-title {
+  color: #67768b;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 17px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.CoveoContextFacet .coveo-context-content .coveo-context-value {
+  color: #313a45;
+  line-height: 15px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#editor .CoveoContextFacet {
+  display: block;
+}
+
+.coveo-context-facet {
+  border: 1px solid #bcc3ca;
+  border-radius: 2px;
+  background: #3b79b7;
+  color: white;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 8px;
+}
+
+.coveo-icon-for-email-svg {
+  height: 12.5px;
+  width: 18px;
+}
+
+.CoveoEmail {
+  cursor: pointer;
+  color: #296896;
+  position: relative;
+}
+
+.CoveoPopup .CoveoFacet {
+  margin: 5px 5px 5px 5px;
+}
+
+.coveo-tab-section .CoveoPopup {
+  position: absolute;
+  float: right;
+  font-size: 15px;
+  margin-top: 10px;
+  right: 3px;
+}
+
+@media (max-width: 480px) {
+  .coveo-tab-section .CoveoPopup {
+    margin-top: 10px;
+  }
+}
+
+.mod-crm-form .coveo-facet-search-results {
+  /*
+            Ensure search results are above the BoxPopup
+          */
+  z-index: 1001;
+}
+
+.mod-crm-form .coveo-facet-settings-popup {
+  z-index: 10000;
+}
+
+.CoveoPopup,
+.CoveoFacetPopup {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+}
+.CoveoPopup.coveo-opened:after,
+.CoveoFacetPopup.coveo-opened:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 47%;
+  z-index: 1;
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-bottom-color: #bcc3ca;
+}
+.CoveoPopup .coveo-popup-wrapper,
+.CoveoFacetPopup .coveo-popup-wrapper {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  margin-top: 5px;
+  border: 1px solid #bcc3ca;
+  background-color: #ffffff;
+  max-height: 500px;
+  overflow: auto;
+  border-radius: 4px;
+}
+.CoveoPopup .coveo-popup-wrapper.mod-full-height,
+.CoveoFacetPopup .coveo-popup-wrapper.mod-full-height {
+  bottom: 0;
+  height: auto;
+  max-height: inherit;
+}
+.CoveoPopup .coveo-popup-wrapper.mod-full-width,
+.CoveoFacetPopup .coveo-popup-wrapper.mod-full-width {
+  right: 0;
+  left: 0;
+  position: fixed;
+  width: auto;
+  max-width: inherit;
+}
+.CoveoPopup.coveo-opened .coveo-popup-wrapper,
+.CoveoFacetPopup.coveo-opened .coveo-popup-wrapper {
+  display: block;
+}
+.CoveoPopup .coveo-popup-toggle,
+.CoveoPopup .coveo-popup-title,
+.CoveoFacetPopup .coveo-popup-toggle,
+.CoveoFacetPopup .coveo-popup-title {
+  cursor: pointer;
+}
+.CoveoPopup .coveo-popup-toggle,
+.CoveoFacetPopup .coveo-popup-toggle {
+  vertical-align: middle;
+}
+.CoveoPopup .coveo-popup-toggle.coveo-hidden,
+.CoveoFacetPopup .coveo-popup-toggle.coveo-hidden {
+  display: none;
+}
+
+.CoveoPopup .coveo-popup-wrapper .coveo-box-facet-column,
+.CoveoFacetPopup .coveo-popup-wrapper .coveo-box-facet-column {
+  margin: 10px;
+  min-width: 250px;
+}
+
+.mod-crm-form
+  .CoveoTab:not(.coveo-tab-dropdown)
+  .CoveoForDynamicsQuickCreate
+  .coveo-icon-for-quickcreate {
+  line-height: 0;
+  vertical-align: text-top;
+}
+
+.mod-crm-form
+  .CoveoTab:not(.coveo-tab-dropdown)
+  .CoveoForDynamicsQuickCreate
+  .coveo-icon-for-quickcreate-svg {
+  vertical-align: baseline;
+}
+
+.CoveoTab .CoveoForDynamicsQuickCreate {
+  float: right;
+  margin-left: 5px;
+}
+.CoveoTab .CoveoForDynamicsQuickCreate .coveo-icon-for-quickcreate {
+  line-height: 0;
+}
+
+.CoveoForDynamicsQuickCreate {
+  cursor: pointer;
+  color: #296896;
+  position: relative;
+}
+.CoveoForDynamicsQuickCreate .coveo-caption {
+  display: none;
+}
+
+.coveo-icon-for-quickcreate-svg {
+  height: 18px;
+  width: 18px;
+}
+
+.CoveoResult .CoveoResultAction .CoveoForDynamicsQuickCreate .coveo-caption {
+  display: block;
+}
+
+.coveo-quick-settings {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 0 5px;
+  min-height: 20px;
+}
+.coveo-quick-settings > * {
+  margin-left: 5px;
+}
+
+.CoveoResult .CoveoResultAction {
+  height: 20px;
+  width: 20px;
+  border-radius: 1000px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #bcc3ca;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.CoveoResult .CoveoResultAction .coveo-box-result-action-container {
+  display: none;
+}
+.CoveoResult .CoveoResultAction .coveo-box-result-action-menu-item {
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  clear: both;
+  text-align: left;
+}
+.CoveoResult .CoveoResultAction .coveo-result-action-squares {
+  width: 100%;
+  display: inline-block;
+  line-height: 2px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.CoveoResult
+  .CoveoResultAction
+  .coveo-result-action-squares
+  .coveo-result-action-square {
+  width: 2px;
+  height: 2px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #67768b;
+}
+.CoveoResult
+  .CoveoResultAction
+  .coveo-result-action-squares
+  .coveo-result-action-square
+  + .coveo-result-action-square {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.CoveoResult
+  .CoveoResultAction
+  .coveo-result-action-squares
+  .coveo-result-action-square
+  + .coveo-result-action-square
+  + .coveo-result-action-square {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.CoveoResult .CoveoResultAction .coveo-box-result-action-container {
+  display: none;
+}
+.CoveoResult .CoveoResultAction .coveo-box-result-action-menu {
+  color: #296896;
+  display: none;
+  position: absolute;
+  top: 24px;
+  background-color: #ffffff;
+  right: 0px;
+  border: 1px solid #bcc3ca;
+  border-radius: 2px;
+}
+.CoveoResult .CoveoResultAction .coveo-box-result-action-menu:before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  right: 3px;
+  z-index: 1;
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-bottom-color: #bcc3ca;
+}
+.CoveoResult .CoveoResultAction .coveo-box-result-action-menu.coveo-opened {
+  display: block;
+  z-index: 1;
+}
+.CoveoResult
+  .CoveoResultAction
+  .coveo-box-result-action-menu
+  .coveo-box-result-action-menu-item {
+  padding: 5px;
+}
+.CoveoResult
+  .CoveoResultAction
+  .coveo-box-result-action-menu
+  .coveo-box-result-action-menu-item:hover {
+  background-color: #e6ecf0;
+}
+
+.coveo-list-layout .CoveoForDynamicsQuickCreate:hover .coveo-caption-for-icon,
+.coveo-list-layout .CoveoLinkToCase:hover .coveo-caption-for-icon,
+.coveo-list-layout .CoveoForDynamicsTakeNote:hover .coveo-caption-for-icon,
+.coveo-list-layout .CoveoEmail:hover .coveo-caption-for-icon {
+  display: block;
+  top: 26px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.coveo-caption-for-icon {
+  font-size: 12px;
+  display: none;
+  background: #263e55;
+  color: white;
+  border-radius: 2px;
+  padding: 6px 16px;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 1;
+}
+.coveo-caption-for-icon:before {
+  border: solid;
+  border-color: #263e55 transparent;
+  border-width: 0 6px 7px 6px;
+  content: "";
+  position: absolute;
+  z-index: 99;
+  top: -6px;
+  left: calc(50% - 6px);
+}
+
+.link-button,
+.unlink-button {
+  display: none;
+  color: #296896;
+  position: relative;
+}
+.link-button.active,
+.unlink-button.active {
+  display: block;
+}
+.link-button .coveo-icon-for-link-svg,
+.link-button .coveo-icon-for-unlink-svg,
+.unlink-button .coveo-icon-for-link-svg,
+.unlink-button .coveo-icon-for-unlink-svg {
+  height: 15px;
+  width: 16px;
+}
+.link-button .coveo-icon-for-link-svg .coveo-icon-x,
+.link-button .coveo-icon-for-unlink-svg .coveo-icon-x,
+.unlink-button .coveo-icon-for-link-svg .coveo-icon-x,
+.unlink-button .coveo-icon-for-unlink-svg .coveo-icon-x {
+  color: #a42b1a;
+}
+
+.coveo-link-to-case-in-menu {
+  text-align: left;
+}
+
+.CoveoLinkToCase {
+  cursor: pointer;
+  position: relative;
+}
+.CoveoLinkToCase .link-button .coveo-caption,
+.CoveoLinkToCase .unlink-button .coveo-caption {
+  display: none;
+}
+
+.CoveoOpenFullSearch {
+  color: #1d4f76;
+  cursor: pointer;
+  display: flex;
+}
+.CoveoOpenFullSearch:hover .arrow {
+  fill: #ecad00;
+}
+.CoveoOpenFullSearch .coveo-open-full-search {
+  margin-left: 5px;
+}
+
+.coveo-open-full-search {
+  fill: #1d4f76;
+}
+.coveo-open-full-search .coveo-open-full-search-svg {
+  width: 18px;
+}
+.coveo-open-full-search:hover .arrow {
+  fill: #ecad00;
+}
+
+.CoveoForDynamicsTakeNote {
+  color: #296896;
+  cursor: pointer;
+  position: relative;
+}
+.CoveoForDynamicsTakeNote .coveo-caption {
+  display: none;
+}
+
+.coveo-box-take-note-in-menu {
+  text-align: left;
+}
+
+.CoveoResult .CoveoResultAction .CoveoForDynamicsTakeNote .coveo-caption {
+  display: block;
+}
+
+.coveo-icon-for-take-note-svg {
+  height: 18px;
+  width: 18px;
+}
+
+body {
+  margin: 0;
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-tab-section {
+  text-align: left;
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-search-section {
+  margin: 10px auto 0 auto;
+  padding: 0 3px;
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-results-header {
+  padding-left: 0;
+}
+
+@media (max-width: 480px) {
+  .CoveoSearchInterface.mod-crm-form .coveo-results-header {
+    flex-wrap: nowrap;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-results-column {
+  padding: 0;
+  overflow: visible;
+}
+
+.CoveoSearchInterface.mod-crm-form .CoveoResultList {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-result-list-container {
+  margin-right: 0;
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-list-layout {
+  padding: 10px 0 10px 0;
+}
+
+.coveo-editionMode .coveo-results-header {
+  overflow: visible;
+}
+
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown) {
+  color: #505050;
+  height: 42px;
+  font-size: 14px;
+  border-top: 2px solid #f8f8f8;
+  border-right: 1px solid #cccccc;
+}
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown) * {
+  line-height: 40px;
+}
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown).coveo-selected,
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown).coveo-selected:hover {
+  border-bottom: none;
+  border-top: 2px solid #0078d7;
+  padding-bottom: 0px;
+  background-color: #ffffff;
+}
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown).coveo-selected p,
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown).coveo-selected:hover p {
+  border-bottom: none;
+}
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown):active,
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown):active:focus,
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown).coveo-selected {
+  outline: none;
+}
+
+.mod-crm-form .coveo-tab-section {
+  min-height: 42px;
+  background-color: #f3f3f3;
+  text-align: center;
+  border-bottom: none;
+}
+
+.mod-crm-form.coveo-small-tabs .coveo-tab-dropdown-header p {
+  line-height: 24px;
+  color: #505050;
+}
+
+@media (max-width: 480px) {
+  .mod-crm-form .coveo-tab-section {
+    min-height: 42px;
+  }
+  .mod-crm-form .CoveoTab {
+    height: 42px;
+  }
+  .mod-crm-form .CoveoTab * {
+    line-height: 40px;
+  }
+}
+
+.result-badge {
+  padding: 0 10px 0 8px;
+  margin-right: 8px;
+  display: inline-block;
+  border-radius: 12px 6px 20px 6px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  color: #fff;
+  left: -4px;
+  z-index: 1;
+  position: relative;
+}
+.result-badge.recommended {
+  left: 0;
+  z-index: 2;
+  margin-right: -4px;
+}
+
+.bg-lavender {
+  background-color: #616be0;
+}
+
+.bg-youtube-red {
+  background-color: #e62117;
+}
+
+.bg-dark-blue {
+  background-color: #2b338b;
+}
+
+.bg-orange {
+  background-color: #f58020;
+}
+
+.coveo-editable .CoveoResultActionsMenu {
+  display: block;
+  margin-top: 0;
+  position: relative;
+  min-height: 20px;
+}
+
+.CoveoResultActionsMenu .CoveoLinkToCase .coveo-caption-for-icon,
+.CoveoResultActionsMenu .CoveoForDynamicsTakeNote .coveo-caption-for-icon,
+.CoveoResultActionsMenu .CoveoForDynamicsQuickCreate .coveo-caption-for-icon,
+.CoveoResultActionsMenu .CoveoEmail .coveo-caption-for-icon {
+  white-space: normal;
+  text-align: center;
+  width: 80px;
+}
+
+.CoveoResultActionsMenu .coveo-result-actions-menu-menu-item {
+  height: 24px;
+}
+.CoveoResultActionsMenu
+  .coveo-result-actions-menu-menu-item
+  .coveo-icon-for-quickview-svg {
+  margin-top: 6px;
+}
+.CoveoResultActionsMenu
+  .coveo-result-actions-menu-menu-item
+  .coveo-icon-for-take-note-svg {
+  margin-top: 2px;
+}
+.CoveoResultActionsMenu
+  .coveo-result-actions-menu-menu-item
+  .coveo-icon-for-quickcreate-svg {
+  margin-top: 2px;
+}
+.CoveoResultActionsMenu
+  .coveo-result-actions-menu-menu-item
+  .coveo-icon-for-link-svg,
+.CoveoResultActionsMenu
+  .coveo-result-actions-menu-menu-item
+  .coveo-icon-for-unlink-svg {
+  margin-top: 4px;
+}
+.CoveoResultActionsMenu
+  .coveo-result-actions-menu-menu-item
+  .coveo-icon-for-email-svg {
+  margin-top: 6px;
+}
+
+@media (max-width: 800px) {
+  .mod-unified-insight .coveo-tab-section {
+    width: calc(100% - 30px);
+    background-color: #f3f3f3;
+    text-align: left;
+  }
+}
+
+.mod-unified-insight .CoveoTab:not(.coveo-tab-dropdown).coveo-selected,
+.mod-unified-insight .CoveoTab:not(.coveo-tab-dropdown).coveo-selected:hover {
+  border-bottom: 0.25rem solid #3b79b7;
+}
+
+.mod-unified-insight.coveo-small-tabs
+  .CoveoTab:not(.coveo-tab-dropdown).coveo-selected,
+.mod-unified-insight.coveo-small-tabs
+  .CoveoTab:not(.coveo-tab-dropdown).coveo-selected:hover {
+  border-bottom: none;
+}
+.mod-unified-insight.coveo-small-tabs
+  .CoveoTab:not(.coveo-tab-dropdown).coveo-selected
+  p,
+.mod-unified-insight.coveo-small-tabs
+  .CoveoTab:not(.coveo-tab-dropdown).coveo-selected:hover
+  p {
+  border-bottom: 0.25rem solid #3b79b7;
+}
+
+.coveo-editionMode .mod-unified-insight .coveo-tab-section-container {
+  display: block;
+}
+
+@media (min-width: 800px) {
+  .mod-unified-insight .CoveoOpenFullSearch {
+    display: none;
+  }
+}
+
+.mod-unified-insight .CoveoOpenFullSearch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 14px 12px 14px 14px;
+  fill: #3b79b7;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #bcc3ca;
+}
+.mod-unified-insight .CoveoOpenFullSearch .coveo-open-full-search-svg {
+  fill: #3b79b7;
+}
+.mod-unified-insight .CoveoOpenFullSearch .coveo-open-full-search-svg {
+  color: #3b79b7;
+  height: 24px;
+}
+@media (max-width: 480px) {
+  .mod-unified-insight .CoveoOpenFullSearch {
+    padding: 11px 12px 9px 11px;
+  }
+  .mod-unified-insight .CoveoOpenFullSearch .coveo-open-full-search-svg {
+    color: #3b79b7;
+    height: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .mod-unified-insight .coveo-result-frame {
+    font-size: 14px;
+  }
+  .mod-unified-insight .CoveoExcerpt {
+    display: inline-block;
+    overflow: hidden;
+    max-height: 57px;
+  }
+  .mod-unified-insight .coveo-list-layout.CoveoResult {
+    padding-left: 0;
+  }
+  .mod-unified-insight .CoveoResultList {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mod-unified-insight .coveo-results-header {
+    flex-wrap: nowrap;
+  }
+  .mod-unified-insight .coveo-summary-section {
+    font-size: 12px;
+  }
+}
+
+.mod-unified-insight .CoveoSort.coveo-selected,
+.mod-unified-insight .CoveoSort.coveo-selected:hover {
+  border-bottom: 0.25rem solid #3b79b7;
+}
+
+.mod-unified-insight .CoveoSort:focus {
+  outline-width: 1px;
+  outline-color: #bcc3ca;
+}
+
+.mod-unified-insight .CoveoSort:hover {
+  color: #3b79b7;
+}
+
+.mod-unified-insight .coveo-search-section .coveo-media-max-width-800 {
+  padding: 20px 10px 20px 10px;
+  margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  .mod-unified-insight .coveo-search-section {
+    padding: 20px 10px 20px 10px;
+    margin: 0 auto;
+  }
+}
