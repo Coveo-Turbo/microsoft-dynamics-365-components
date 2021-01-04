@@ -38,11 +38,17 @@ export class CrmLiquidInterpreter implements IFormSyntaxInterpreter {
         } else {
             obj = this.contextObjects.get(defaultContextObject);
         }
-        fieldValue = obj.get(key);
 
-        if (!fieldValue) {
-            console.log(`Object with key "${key}" does not exists.`);
+        if (!obj) {
+            console.log(`Object "${defaultContextObject}" does not exists.`);
             return "";
+        } else {
+            fieldValue = obj.get(key);
+
+            if (!fieldValue) {
+                console.log(`Object with key "${key}" does not exists.`);
+                return "";
+            }
         }
 
         return this.fieldValueToString(fieldValue, keys);
