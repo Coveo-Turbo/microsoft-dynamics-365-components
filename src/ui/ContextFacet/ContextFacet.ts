@@ -6,11 +6,12 @@ import {
   IComponentBindings,
   l,
 } from "coveo-search-ui";
-import { CrmClient } from "coveo-xrm";
-import { inject, Injectable } from "../../core/Injector";
+// import { CrmClient } from "coveo-xrm";
+// import { inject, Injectable } from "../../core/Injector";
+
 import { IRecord } from "../../core/IRecord";
 import { Annotations } from "../../core/ODataConstants";
-import { FormContextHandler } from "../../Initialization";
+import { FormContextHandler, Crm } from "../../Initialization";
 import { InsightEvents } from "../../models/QueryStateModel";
 import { ContextAttributes } from "./ContextAttributes";
 import tippy from "tippy.js";
@@ -69,8 +70,8 @@ export class ContextFacet extends Component {
     additionalAttributes: ComponentOptions.buildListOption<string>(),
   };
 
-  @inject(Injectable.CrmClient)
-  private crm: CrmClient;
+  // @inject(Injectable.CrmClient)
+  // private crm: CrmClient;
 
   /**
    * Creates a new ContextFacet component.
@@ -101,7 +102,7 @@ export class ContextFacet extends Component {
       this.initializeStateAttribute();
       this.retrieveRecord();
     } else {
-        this.logger.info('No entity detected.');
+      this.logger.info('No entity detected.');
     }
   }
 
@@ -119,7 +120,7 @@ export class ContextFacet extends Component {
     let collectionName: string;
     try {
       collectionName = await FormContextHandler.getEntitySetName(
-        this.crm.WebApi,
+        Crm.WebApi,
         entity
       );
     } catch (error) {
@@ -145,7 +146,7 @@ export class ContextFacet extends Component {
   }
 
   private requestRecord(collectionName: string, id: string): Promise<IRecord> {
-    const odata = this.crm.WebApi.init();
+    const odata = Crm.WebApi.init();
     return odata
       .resource(`${collectionName}(${id})`)
       .select([
@@ -197,7 +198,6 @@ export class ContextFacet extends Component {
   private renderHeader(record: IRecord) {
     const header = $$("div", {
       className: "coveo-context-header",
-      title: l("ContextFacetTooltip"),
     });
     const headerFrom = $$(
       "div",
@@ -219,7 +219,7 @@ export class ContextFacet extends Component {
     header.append(headerFrom.el);
     header.append(headerEntity.el);
 
-    tippy(header.el, {});
+    tippy(header.el, { content: l("ContextFacetTooltip") });
 
     $$(this.element).append(header.el);
   }
