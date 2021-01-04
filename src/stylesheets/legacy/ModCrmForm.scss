@@ -1,0 +1,115 @@
+.mod-crm-form .coveo-facet-search-results {
+  /*
+              Ensure search results are above the BoxPopup
+            */
+  z-index: 1001;
+}
+
+.mod-crm-form .coveo-facet-settings-popup {
+  z-index: 10000;
+}
+
+.mod-crm-form
+  .CoveoTab:not(.coveo-tab-dropdown)
+  .CoveoQuickCreate
+  .coveo-icon-for-quickcreate {
+  line-height: 0;
+  vertical-align: text-top;
+}
+
+.mod-crm-form
+  .CoveoTab:not(.coveo-tab-dropdown)
+  .CoveoQuickCreate
+  .coveo-icon-for-quickcreate-svg {
+  vertical-align: baseline;
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-tab-section {
+  text-align: left;
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-search-section {
+  margin: 10px auto 0 auto;
+  padding: 0 3px;
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-results-header {
+  padding-left: 0;
+}
+
+@media (max-width: 480px) {
+  .CoveoSearchInterface.mod-crm-form .coveo-results-header {
+    flex-wrap: nowrap;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-results-column {
+  padding: 0;
+  overflow: visible;
+}
+
+.CoveoSearchInterface.mod-crm-form .CoveoResultList {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-result-list-container {
+  margin-right: 0;
+}
+
+.CoveoSearchInterface.mod-crm-form .coveo-list-layout {
+  padding: 10px 0 10px 0;
+}
+
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown) {
+  color: #505050;
+  height: 42px;
+  font-size: 14px;
+  border-top: 2px solid #f8f8f8;
+  border-right: 1px solid #cccccc;
+}
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown) * {
+  line-height: 40px;
+}
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown).coveo-selected,
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown).coveo-selected:hover {
+  border-bottom: none;
+  border-top: 2px solid #0078d7;
+  padding-bottom: 0px;
+  background-color: #ffffff;
+}
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown).coveo-selected p,
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown).coveo-selected:hover p {
+  border-bottom: none;
+}
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown):active,
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown):active:focus,
+.mod-crm-form .CoveoTab:not(.coveo-tab-dropdown).coveo-selected {
+  outline: none;
+}
+
+.mod-crm-form .coveo-tab-section {
+  min-height: 42px;
+  background-color: #f3f3f3;
+  text-align: center;
+  border-bottom: none;
+}
+
+.mod-crm-form.coveo-small-tabs .coveo-tab-dropdown-header p {
+  line-height: 24px;
+  color: #505050;
+}
+
+@media (max-width: 480px) {
+  .mod-crm-form .coveo-tab-section {
+    min-height: 42px;
+  }
+  .mod-crm-form .CoveoTab {
+    height: 42px;
+  }
+  .mod-crm-form .CoveoTab * {
+    line-height: 40px;
+  }
+}
