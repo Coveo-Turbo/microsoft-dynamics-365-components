@@ -1,0 +1,8 @@
+$button-height: 22px;
+$button-padding-y: 2px;
+$button-padding-x: 7px;
+@import "../../node_modules/coveo-styleguide/scss/elements/btn";
+
+.btn {
+    color: $crm-tab-police-grey;
+}
