@@ -1,0 +1,9 @@
+{
+    "ContextFacetTooltip": "Clicking the actions (Link to Case, Email, etc.) available for the search results in this page will affect this record.",
+    "TypingSomethingRemovesContext": "Entering keywords in the search box disables contextual filters.",
+    "statuscode": "Status",
+    "createdon": "Created On",
+    "_ownerid_value": "Owner",
+    "AssociationAlreadyExists": "Association already exists",
+    "AssociationAlreadyExistsText": "This article is already linked to the incident record. To send email with this link, select OK. Otherwise, select Cancel."
+}

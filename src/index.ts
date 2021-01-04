@@ -6,6 +6,9 @@ export * from "./Initialization";
 export * from "./DynamicsTokenHandler";
 export * from "./DynamicsUserInfoHandler";
 
+// Coveo Turbo
+export * as LocalizationManager from '@coveops/localization-manager';
+
 // UI Components
 export { InsightPanelSearchTips } from "./ui/InsightPanelSearchTips/InsightPanelSearchTips";
 export { CrmResultLink } from "./ui/CrmResultLink/CrmResultLink";

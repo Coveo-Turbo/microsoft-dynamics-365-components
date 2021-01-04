@@ -11,14 +11,18 @@
     <script src="config.js"></script>
     <script src="component.js"></script>
     <!-- <script src="components/<name>.js"></script> -->
+    <script src="locales/en.js"></script>
 
     <script src="init.js"></script>
+    
 
     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.9659/css/CoveoFullSearchNewDesign.css" />
     <link rel="stylesheet" href="component.css" />
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            Coveo.LocalizationManager(LOCALES);
+
             // Coveo.SearchEndpoint.endpoints['default'].options.queryStringArguments.viewAllContent = 'true';
             Coveo.init(document.getElementById('search'), {
                 Analytics: {
