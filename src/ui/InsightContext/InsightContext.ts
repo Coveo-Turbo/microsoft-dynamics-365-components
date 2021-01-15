@@ -61,7 +61,10 @@ export class InsightContext extends PipelineContext {
             const value: IAttributeWithValue = Insight.context.getAttributeValue(
               field
             );
-            if (value.value) {
+            if (value.value && value.name == "formid") {
+              args.queryBuilder.addContextValue(value.name, value.value);
+              args.queryBuilder.addContextValue(value.name+"_formated", value.value.replace(/-/g,''));
+            } else if (value.value) {
               args.queryBuilder.addContextValue(value.name, value.value);
             }
           });
