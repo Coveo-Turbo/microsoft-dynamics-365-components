@@ -1,6 +1,6 @@
 {
     "name": "@coveops/microsoft-dynamics-365-components",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "description": "",
     "main": "dist/index.js",
     "scripts": {
@@ -18,7 +18,7 @@
         "dist"
     ],
     "dependencies": {
-        "@coveops/localization-manager": "^1.0.0",
+        "@coveops/localization-manager": "^1.0.1",
         "@coveops/turbo-core": "^1.1.1",
         "coveo-search-ui": "^2.10081.2",
         "coveo-styleguide": "^8.8.0",
