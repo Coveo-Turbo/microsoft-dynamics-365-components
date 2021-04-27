@@ -85,7 +85,11 @@
               <script id="Default" class="result-template" type="text/html" data-layout="list"><div class="coveo-result-frame">
         <div class="coveo-result-cell" style="vertical-align:top;text-align:center;width:32px;">
           <span class="CoveoIcon" data-small="true" data-with-label="false"></span>
-          <div class="CoveoQuickview"></div>
+          <span class="CoveoResultActionsMenu">
+            <div class="CoveoQuickview"></div>
+            <div class="CoveoResultActionsTakeNote" data-template-id="ResultActionsTakeNoteTemplate"></div>
+            <div class="CoveoResultActionsSendEmail"></div>
+          </span>
         </div>
         <div class="coveo-result-cell" style="vertical-align: top;padding-left: 16px;">
           <div class="coveo-result-row" style="margin-top:0;">
@@ -123,6 +127,18 @@
           </div>
         </div>
       </div></script>
+
+      <script id="ResultActionsTakeNoteTemplate" class="result-template" type="text/html" data-layout="list">
+        <div>
+          <span>Marked as relevant: </span>
+          <br />
+          <span class="CoveoFieldValue" data-field="@title"></span>
+          <br /><br />
+          <span class="CoveoFieldValue" data-field="@clickuri"></span>
+        </div>
+      </script>
+
+
             </div>
             <div class="CoveoPager"></div>
             <div class="CoveoLogo"></div>

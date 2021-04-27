@@ -114,14 +114,29 @@ export class ResultActionsTakeNote extends ResultActionBase {
       ResultActionsTakeNote,
       options
     );
-    if (!this.options.contentTemplate) {
-      this.options.contentTemplate = new DefaultResultActionsTakeNoteTemplate();
+
+    if (!this.checkIE()) {
+      if (!this.options.contentTemplate) {
+        this.options.contentTemplate = new DefaultResultActionsTakeNoteTemplate();
+      }
+  
+      this.render();
+      if (!this.display()) {
+        this.hide();
+      }
+    }
+  }
+
+  checkIE(): Boolean {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+    var isIE = false;
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+    {
+       isIE = true;
     }
 
-    this.render();
-    if (!this.display()) {
-      this.hide();
-    }
+    return isIE
   }
 
   prepareResultActionsTakeNoteComponent(): Promise<Coveo.Dom> {
