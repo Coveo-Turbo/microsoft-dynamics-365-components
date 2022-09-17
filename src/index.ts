@@ -4,9 +4,12 @@ export { Insight } from "./utils/Insight";
 
 export * from "./Initialization";
 export * from "./DynamicsTokenHandler";
+export * from "./DynamicsServiceTokenHandler";
 export * from "./DynamicsUserInfoHandler";
+export * from "./DynamicsFetchXMLHandler";
 
 // Coveo Turbo
+// version : 1.5.1
 export * as LocalizationManager from '@coveops/localization-manager';
 
 // UI Components

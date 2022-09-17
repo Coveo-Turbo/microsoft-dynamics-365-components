@@ -12,6 +12,7 @@ import { lazyDependentComponent } from '@coveops/turbo-core';
 
 export interface ICrmResultLinkOptions extends IResultLinkOptions {
   alwaysUseXrmApi?: boolean;
+  openInNewWindow?: boolean;
 }
 
 
@@ -35,6 +36,9 @@ export class CrmResultLink extends ResultLink {
      * Default value is `false`.
      */
     alwaysUseXrmApi: ComponentOptions.buildBooleanOption({
+      defaultValue: false,
+    }),
+    openInNewWindow: ComponentOptions.buildBooleanOption({
       defaultValue: false,
     }),
   };
@@ -71,7 +75,7 @@ export class CrmResultLink extends ResultLink {
           {
             entityName: resultUri.entityName,
             entityId: resultUri.recordId,
-            openInNewWindow: true,
+            openInNewWindow: this.options.openInNewWindow,
           },
           null
         );

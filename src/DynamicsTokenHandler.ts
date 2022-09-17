@@ -14,6 +14,9 @@ const SEARCH_CONFIG_COOKIE_NAME = "CoveoSearchConfig";
 const DEFAULT_CONFIG_EXPIRATION_DELAY = 8 * 60 * 60 * 1000;
 const GET_SEARCH_TOKEN = 'coveo_GetSearchConfig';
 
+/**
+ * @deprecated Use this instead : https://connect.coveo.com/s/article/7134
+ */
 export class DynamicsTokenHandler {
 
     // constructor() {
@@ -29,6 +32,9 @@ export class DynamicsTokenHandler {
     //     console.log('success');
     // }
 
+    /**
+     * @deprecated Use this instead : https://connect.coveo.com/s/article/7134
+     */
     public getConfig(): Promise<ISearchConfig> {
         const config = this.tryGetConfigFromCookies();
         if (this.shouldRetrieveNewConfig(config)) {
